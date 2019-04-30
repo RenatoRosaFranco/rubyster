@@ -27,8 +27,9 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= button_to 'Novo Grupo', new_group_path, method: :get, 
+        <li><%= button_to 'Adicionar Grupo', new_group_path, method: :get, 
         class: 'btn btn-primary btn-sm', style: 'margin-top: 8px;' %></li>
+        <% if current_user %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -39,6 +40,10 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
+        <% else %>
+				 <li><%= button_to 'Criar conta', new_user_registration_path, method: :get, class: 'btn btn-danger btn-sm', style: 'margin-top: 8px; margin-left: 10px;' %></li>
+         <li><%= link_to 'Entrar', new_user_session_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
