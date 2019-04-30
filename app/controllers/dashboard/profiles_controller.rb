@@ -23,7 +23,7 @@ module Dashboard
 
   	def destroy
     	@profile.user.destroy
-    	redirect_to destroy_users_session_path, method: :delete    	
+    	redirect_to destroy_user_session_path, method: :delete
   	end
 
 	  private

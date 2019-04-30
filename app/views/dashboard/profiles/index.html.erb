@@ -6,8 +6,12 @@
 			<div class="col-md-12">
 				<h2>Bem vindo <%= link_to current_user.name %></h2>
 				<p>Fique avontade para explorar as comunidades rubistas as redor do mundo.</p>
-				<%= button_to 'Meu Perfil', edit_dashboard_profile_path(current_user.profile.id),
-				method: :get, class: 'btn btn-primary btn-lg', style: 'margin-left: 0px;' %>
+				<ul class='list-inline'>
+					<li><%= button_to 'Meu Perfil', edit_dashboard_profile_path(current_user.profile.id),
+					method: :get, class: 'btn btn-primary btn-lg', style: 'margin-left: 0px;' %> </li>
+			  	<li><%= button_to 'Deletar Perfil', dashboard_profile_path(current_user.profile.id),
+					method: :delete, class: 'btn btn-danger btn-lg', style: 'margin-left: 0px;',
+					data: { confirm: 'Are you sure?' } %> </li>
 			</div>
 		</div>
 	</div>
