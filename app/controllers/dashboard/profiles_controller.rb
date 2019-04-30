@@ -21,6 +21,11 @@ module Dashboard
     	respond_with(:dashboard, @profile)
   	end
 
+  	def destroy
+    	@profile.user.destroy
+    	redirect_to destroy_users_session_path, method: :delete    	
+  	end
+
 	  private
 
 	  def set_profile
