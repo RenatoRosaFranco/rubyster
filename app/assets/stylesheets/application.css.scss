@@ -14,3 +14,35 @@
  *= require_self
  */
  @import 'bootstrap';
+ 
+ .navbar-default {
+ 	background-color: #FFF;
+ 	.navbar-brand {
+ 	 position: relative;
+ 	 font-weight: bold;
+ 	 font-size: 22px;
+ 	}
+ 	a {
+ 	 position: relative;
+ 	 font-size: 13px;
+ 	 text-transform: uppercase;
+ 	}
+ }
+
+ form {
+ 	input[type=search] {
+ 		position: relative;
+ 		border-left: 0px;
+ 	}
+
+ 	.input-group-addon {
+ 		position: relative;
+ 		background-color: #FFF !important;
+ 		border-right: none; 
+ 		i {
+ 		 position: relative;
+ 		 font-size: 18px;
+ 		 color: #999;
+ 		}
+ 	}
+ }
