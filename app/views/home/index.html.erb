@@ -6,11 +6,12 @@
 			<div class='row'>
 				<div class='col-md-6 col-md-offset-3'>
 				<%= form_for :group do |f| %>
-					<div class='field col-md-7'>
+					<div class='field col-md-9'>
 						<div class='input-group'>
 							<div class='input-group-addon'><i class="fas fa-map-marker-alt"></i></div>
 						<%= f.search_field :name, class: 'form-control', required: 'required',
 						placeholder: 'Nome, Estado, Cidade ou Região', autocomplete: 'off' %>
+						  <div class='input-group-addon'><i class="fas fa-map-marker-alt"></i></div>
 						</div>
 					</div>
 					<div class="field col-md-2">
@@ -29,7 +30,9 @@
 		<div class='row'>
 			<div class='col-md-12'>
 				<% Group.all.each do |group| %>
+				 <% for i in 1..6 %>
 					<div class="col-md-3">
+						<div class="jumbotron" style='margin-bottom: 0px; border-radius: 0px; height: 140px;'></div>
 						<div class='panel panel-default' style='padding: 20px;'>
 							<h4><%= link_to group.name, group_path(group) %></h4>
 							<small>
@@ -39,6 +42,7 @@
 							</small>
 						</div>
 					</div>
+					<% end %>
 				<% end %>
 			</div>
 		</div>
