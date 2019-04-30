@@ -14,7 +14,22 @@
  *= require_self
  */
  @import 'bootstrap';
- 
+ 	#presenter {
+ 		padding-top: 120px !important;
+ 		background-color: #FFF;
+ 		form {
+ 		 position: relative;
+ 		 input[type=search] {
+ 		 	position: relative;
+ 		 	height: 44px;
+ 		 }
+ 		 input[type=submit] {
+ 		 	position: relative;
+ 		 	margin-left: -25px;
+ 		 }
+ 		}
+ 	}
+
  .navbar-default {
  	background-color: #FFF;
  	.navbar-brand {
