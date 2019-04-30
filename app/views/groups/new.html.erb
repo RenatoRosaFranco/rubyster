@@ -1,0 +1,14 @@
+<% provide :title, 'Adicionar' %>
+
+<section id='group'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<h1>New Group</h1>
+				<%= render 'form', group: @group %>
+
+				<%= link_to 'Back', groups_path %>
+			</div>
+		</div>
+	</div>
+</section>

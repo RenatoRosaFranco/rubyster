@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 class Group < ApplicationRecord
+	extend FriendlyId
+	friendly_id :name, use: :slugged
+	
 	self.table_name = 'groups'
 	self.primary_key = 'id'
 

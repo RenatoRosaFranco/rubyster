@@ -1,0 +1,53 @@
+<%= form_with(model: group, local: true) do |form| %>
+  <% if group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %> <span class='required'>*</span>
+    <%= form.text_field :name, class: 'form-control', required: 'required',
+    placeholder: 'Digite o nome', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %> <span class='required'>*</span>
+    <%= form.text_field :email, class: 'form-control', required: 'required',
+    placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %> <span class='required'>*</span>
+    <%= form.text_field :website, class: 'form-control', required: 'required',
+    placeholder: 'Digite o website', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %> <span class='required'>*</span>
+    <%= form.text_field :address, class: 'form-control', required: 'required',
+    placeholder: 'Digite o endereço', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %> <span class='required'>*</span>
+    <%= form.text_field :region, class: 'form-control', required: 'required',
+    placeholder: 'Digite a região', autocomplete: 'off' %>
+  </div>
+
+  <div class="field"> 
+    <%= form.label :country %> <span class='required'>*</span>
+    <%= form.text_field :country, class: 'form-control', required: 'required',
+    placeholder: 'Digite o país', autocomplete: 'off' %>
+  </div>
+
+  <div class="actions"><br>
+    <%= form.submit nil, class: 'btn btn-primary btn-lg' %>
+  </div>
+<% end %>
