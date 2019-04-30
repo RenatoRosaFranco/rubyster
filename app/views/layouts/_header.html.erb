@@ -19,13 +19,18 @@
       	<li><%= link_to 'Sobre',   root_path %></li>
       	<li><%= link_to 'Contato', root_path %></li>
       </ul>
+			
+			<%= form_for :group, {html: {class: 'navbar-form navbar-left', id: 'headerSearch'}} do |f| %>
+				<div class='form-group'>
+					<div class='input-group'>
+						<div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>					
+						<%= f.search_field :name, class: 'form-control', required: 'required',
+						placeholder: 'Nome, Estado, Cidade ou Região', autocomplete: 'off' %>
+						</div>
+				</div>
+				<%= f.submit 'Buscar', class: 'btn btn-primary top' %>
+			<% end %>
 
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
         <li><%= button_to 'Adicionar Grupo', new_group_path, method: :get, 
         class: 'btn btn-primary btn-sm', style: 'margin-top: 8px;' %></li>
