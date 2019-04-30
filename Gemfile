@@ -22,6 +22,8 @@ gem 'active_model_serializers'
 gem 'awesome_print'
 gem 'ffaker'
 gem 'geocoder'
+gem 'jquery-rails'
+gem 'bootstrap3-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
