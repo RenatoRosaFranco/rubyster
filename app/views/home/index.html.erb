@@ -1,0 +1,38 @@
+<% provide :title, 'Home' %>
+
+<section id='presenter'>
+	<div class='container'>
+		<div class='col-md-12'>
+			<div class='row'>
+				<%= form_for :group do |f| %>
+					<div class='field'>
+						<%= f.search_field :name, class: 'form-control', required: 'required',
+						placeholder: 'Nome, Estado, Cidade ou Região', autocomplete: 'off' %>
+					</div>
+					<div class="field">
+						<%= f.submit 'Buscar', class: 'btn btn-primary btn-lg top' %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="groups">
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<% Group.all.each do |group| %>
+					<div class="col-md-3">
+						<h4><%= link_to group.name, groups_path(group) %></h4>
+						<small>
+							<%= group.address %>  /
+							<%= group.region  %>  /
+							<%= link_to group.country, groups_path(country: group.country.downcase) %> 
+						</small>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>

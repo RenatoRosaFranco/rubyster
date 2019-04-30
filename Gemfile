@@ -18,6 +18,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'responders'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
+gem 'active_model_serializers'
+gem 'awesome_print'
+gem 'ffaker'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
