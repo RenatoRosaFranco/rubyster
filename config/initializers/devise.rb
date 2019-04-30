@@ -12,8 +12,18 @@ Devise.setup do |config|
 
   # Facebook Application
   # @implemented
-  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], 
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'],
   callback_url: "http://localhost:3000/users/auth/facebook/callback"
+
+  # Google Application
+  # @implemented
+  config.omniauth :github,   ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_CLIENT_SECRET'],
+  callback_url: "http://localhost:3000/users/auth/google/callback"
+
+  # Github Application
+  # @implemented
+  config.omniauth :github,   ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_CLIENT_SECRET'],
+  callback_url: "http://localhost:3000/users/auth/github/callback"
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
