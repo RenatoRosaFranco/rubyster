@@ -1,2 +1,5 @@
-module Dashboard::HomeHelper
+module Dashboard
+	module HomeHelper
+
+	end
 end
