@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<% provide :title, @group.name %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
+<section id="group">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @group.email %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @group.name %>
+        </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @group.website %>
-</p>
+        <p>
+          <strong>Email:</strong>
+          <%= @group.email %>
+        </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @group.address %>
-</p>
+        <p>
+          <strong>Website:</strong>
+          <%= @group.website %>
+        </p>
 
-<p>
-  <strong>Region:</strong>
-  <%= @group.region %>
-</p>
+        <p>
+          <strong>Address:</strong>
+          <%= @group.address %>
+        </p>
 
-<p>
-  <strong>Contry:</strong>
-  <%= @group.country %>
-</p>
+        <p>
+          <strong>Region:</strong>
+          <%= @group.region %>
+        </p>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+        <p>
+          <strong>Contry:</strong>
+          <%= @group.country %>
+        </p>
+
+        <%= link_to 'Edit', edit_group_path(@group) %> |
+        <%= link_to 'Back', groups_path %>
+      </div>
+    </div>
+  </div>
+</section>
