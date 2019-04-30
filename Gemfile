@@ -14,6 +14,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pundit'
+gem 'rails_admin'
 gem 'responders'
 gem 'rspec-rails'
 gem 'factory_bot_rails'

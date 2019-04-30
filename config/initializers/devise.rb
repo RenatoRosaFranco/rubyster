@@ -17,12 +17,12 @@ Devise.setup do |config|
 
   # Google Application
   # @implemented
-  config.omniauth :github,   ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_CLIENT_SECRET'],
-  callback_url: "http://localhost:3000/users/auth/google/callback"
+  config.omniauth :google_oauth2, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_APP_SECRET'],
+  callback_url: "http://localhost:3000/users/auth/google_oauth2/callback"
 
   # Github Application
   # @implemented
-  config.omniauth :github,   ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_CLIENT_SECRET'],
+  config.omniauth :github, ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_CLIENT_SECRET'],
   callback_url: "http://localhost:3000/users/auth/github/callback"
   
   # ==> Controller configuration
