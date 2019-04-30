@@ -21,6 +21,7 @@ gem 'factory_bot_rails'
 gem 'active_model_serializers'
 gem 'awesome_print'
 gem 'ffaker'
+gem 'geocoder'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
