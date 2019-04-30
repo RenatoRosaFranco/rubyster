@@ -31,6 +31,9 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'rails-erd'
 gem 'dotenv-rails'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
