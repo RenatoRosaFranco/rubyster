@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  namespace :dashboard do
+    get 'profile/index'
+  end
+  namespace :dashboard do
+    get 'home/index'
+  end
  	# Authentication
   devise_for :users
 

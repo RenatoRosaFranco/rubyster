@@ -1,0 +1,14 @@
+<% provide :title, 'Dashboard' %>
+
+<section id="presenter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Bem vindo <%= link_to current_user.name %></h2>
+				<p>Fique avontade para explorar as comunidades rubistas as redor do mundo.</p>
+				<%= button_to 'Meu Perfil', edit_dashboard_profile_path(current_user.profile.id),
+				method: :get, class: 'btn btn-primary btn-lg', style: 'margin-left: 0px;' %>
+			</div>
+		</div>
+	</div>
+</section>

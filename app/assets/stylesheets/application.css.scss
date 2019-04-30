@@ -14,7 +14,15 @@
  *= require_self
  */
  @import 'bootstrap';
- 	#presenter {
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+
+ body {
+ 	position: relative;
+ 	font-size: 16px;
+ 	font-family: 'Montserrat', serif, sans-serif;
+ }
+
+ #presenter {
  		padding-top: 120px !important;
  		background-color: #FFF;
  		form {

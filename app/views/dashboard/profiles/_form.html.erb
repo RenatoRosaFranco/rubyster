@@ -1,0 +1,53 @@
+<%= form_with(model: [:dashboard, profile], local: true) do |form| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :birthdate, 'Data de Nascimento' %> <span class='required'>*</span>
+    <%= form.date_field :birthdate, class: 'form-control', required: 'required',
+    placeholder: 'Digite a data de nascimento', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender, 'Genero' %> <span class='required'>*</span>
+    <%= form.select(:gender, {'Masculino' => 'Masculino', 'Feminino' => 'Feminino'},
+    {prompt: 'Selecionar o Genero'}, {class: 'form-control', required: 'required'}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio, 'Biografia' %> <span class='required'>*</span>
+    <%= form.text_area :bio, class: 'form-control', required: 'required',
+    placeholder: 'Conte-nos um pouco sobre você', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location, 'Localização' %> <span class='required'>*</span>
+    <%= form.text_field :location, class: 'form-control', required: 'required',
+    placeholder: 'Digite seu endereço / cidade', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state, 'Estado' %> <span class='required'>*</span>
+    <%= form.text_field :state, class: 'form-control', required: 'required',
+    placeholder: 'Digite o estado', autocomplete: 'off' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country, 'Pais' %> <span class='required'>*</span>
+    <%= form.text_field :country, class: 'form-control', required: 'required',
+    placeholder: 'Digite o país', autocomplete: 'off' %>
+  </div>
+
+  <div class="actions"><br>
+    <%= form.submit nil, class: 'btn btn-primary btn-lg' %>
+  </div>
+<% end %>
