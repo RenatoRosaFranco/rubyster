@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby '2.6.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 gem 'pry-rails'
 gem 'pry-byebug'
+gem 'alertifyjs-rails'
 gem 'pundit'
 gem 'rails_admin'
 gem 'responders'
@@ -27,6 +28,10 @@ gem 'ffaker'
 gem 'geocoder'
 gem 'better_errors'
 gem 'jquery-rails'
+gem 'draper'
+gem 'clockwork'
+gem 'sidekiq'
+gem 'delayed_job'
 gem 'bootstrap3-rails'
 gem 'friendly_id'
 gem 'devise'

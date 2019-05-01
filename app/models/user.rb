@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 class User < ApplicationRecord
+	extend FriendlyId
+	friendly_id :nickname, use: :slugged
+
 	self.table_name = 'users'
 	self.primary_key = 'id'
   
